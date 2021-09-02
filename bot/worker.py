@@ -30,7 +30,7 @@ async def stats(e):
     except Exception as er:
         LOGS.info(er)
         await e.answer(
-            "Someting Went Wrong 🤔\nMaybe Bot was restarted", cache_time=0, alert=True
+            "Error 404: File | Info not Found 🤔\nMaybe Bot was restarted", cache_time=0, alert=True
         )
 
 
@@ -62,16 +62,16 @@ async def encod(event):
             # id = pack_bot_file_id(event.media)
             doc = event.media.document
             if doc.id in list(QUEUE.keys()):
-                return await xxx.edit("THIS FILE ALREADY IN QUEUE")
+                return await xxx.edit("`THIS FILE HAS ALREADY BEEN ADDED TO QUEUE`")
             name = event.file.name
             if not name:
                 name = "video_" + dt.now().isoformat("_", "seconds") + ".mp4"
             QUEUE.update({doc.id: [name, doc]})
             return await xxx.edit(
-                "Added to Queue ⏰, Please Wait , Compress will start soon"
+                "**Added to Queue ⏰,** \n`Please Wait , Compress will start soon`"
             )
         WORKING.append(1)
-        xxx = await event.reply("📥.Downloading.📥")
+        xxx = await event.reply("`➟ Downloading…`")
         s = dt.now()
         ttt = time.time()
         dir = f"downloads/"
@@ -93,7 +93,7 @@ async def encod(event):
                                 t,
                                 xxx,
                                 ttt,
-                                "📥.Downloading.📥",
+                                "`➟ Downloading…`",
                             )
                         ),
                     )
@@ -102,7 +102,7 @@ async def encod(event):
                     event.media,
                     dir,
                     progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                        progress(d, t, xxx, ttt, "📥.Downloading.📥")
+                        progress(d, t, xxx, ttt, "`➟ Downloading…`")
                     ),
                 )
         except Exception as er:
@@ -121,9 +121,9 @@ async def encod(event):
         hehe = f"{out};{dl};0"
         wah = code(hehe)
         nn = await e.edit(
-            "YOUR FILE IS BEING ENCODED",
+            "`Encoding Files…` \n**⏳This Might Take A While⏳**",
             buttons=[
-                [Button.inline("ENCODING STATS", data=f"stats{wah}")],
+                [Button.inline("STATS", data=f"stats{wah}")],
                 [Button.inline("CANCEL PROCESS", data=f"skip{wah}")],
             ],
         )
@@ -144,14 +144,14 @@ async def encod(event):
         ees = dt.now()
         ttt = time.time()
         await nn.delete()
-        nnn = await e.client.send_message(e.chat_id, "📤.UPLOADING.📤")
+        nnn = await e.client.send_message(e.chat_id, "`🔺○Uploading○🔺`")
         with open(out, "rb") as f:
             ok = await upload_file(
                 client=e.client,
                 file=f,
                 name=out,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                    progress(d, t, nnn, ttt, "📤.UPLAODING.📤")
+                    progress(d, t, nnn, ttt, "`🔺○Uploading○🔺`")
                 ),
             )
         ds = await e.client.send_file(
