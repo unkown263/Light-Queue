@@ -29,7 +29,7 @@ async def up(event):
 
 async def start(event):
     await event.reply(
-        f"Hi `{event.sender.first_name}`\nThis is A Bot  Which Can Encode Videos.\nReduce Size of Videos in 480p\nU can Generate Samples/screenshots too.",
+        f"Hi `{event.sender.first_name}`\nThis Is A Bot Which Can Encode Videos.\nReduce Size Of Videos To 480p Or 720p As The Case May Be\nYou Can Also Generate Samples/Screenshots too.",
         buttons=[
             [Button.url("Repo (Source Code)", url="https://github.com/Rick-and-Roll/Light-Queue")],[Button.url("📢 AD", url="t.me/RsTvMarvel")],
             [
