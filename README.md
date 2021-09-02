@@ -10,7 +10,7 @@
 `THUMBNAIL` : Put telegraph link of a picture for use of Thumbnail.
 
 `FFMPEG` : Put your preferred ffmpeg code 
-[OR To use Handbrake-cli input `bash test.sh` instead then edit test.sh file (not for those deploying to heroku)]
+[OR To use Handbrake-cli input `bash test.sh` instead then edit [test.sh file](test.sh) (not for those deploying to heroku)]
 
 ### Deploy 
 #### On Railway
