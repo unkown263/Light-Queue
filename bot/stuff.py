@@ -31,10 +31,10 @@ async def start(event):
     await event.reply(
         f"Hi `{event.sender.first_name}`\nThis is A Bot  Which Can Encode Videos.\nReduce Size of Videos in 480p\nU can Generate Samples/screenshots too.",
         buttons=[
-            [Button.url("GROUP", url="t.me/anime_hub_group")],
+            [Button.url("REPO", url="https://github.com/Rick-and-Roll/Light-Queue")],[Button.url("☘️", url="t.me/RsTvMarvel")],
             [
-                Button.url("CHANNEL", url="t.me/animes_encoded"),
-                Button.url("BOSS", url="t.me/Bro_isDarkal"),
+                Button.url("CHANNEL", url="t.me/RS_Community"),
+                Button.url("Maintainer", url="t.me/itsjust_r"),
             ],
         ],
     )
