@@ -9,7 +9,7 @@
 
 `THUMBNAIL` : Put telegraph link of a picture for use of Thumbnail.
 
-`FFMPEG` : Put your best ffmpeg code , U can ask code at t.me/Anime_Hub_Group
+`FFMPEG` : Put your preferred ffmpeg or Handbrake-cli code
 
 ### Deploy 
 #### On Railway
