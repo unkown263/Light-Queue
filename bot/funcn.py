@@ -85,7 +85,7 @@ async def progress(current, total, event, start, type_of_ps, file=None):
         progress_str = "**Progress**: `{0}{1} {2}%` \n".format(
             "".join(["🖤" for i in range(math.floor(percentage / 5))]),
             "".join(["🤍" for i in range(10 - math.floor(percentage / 5))]),
-            round(percentage, 1),
+            round(percentage, 4),
         )
         tmp = (
             progress_str
