@@ -93,7 +93,7 @@ async def encod(event):
                                 t,
                                 xxx,
                                 ttt,
-                                "`➟ Downloading…`",
+                                "`Download Pending…` \n**(Waiting For Connection)**",
                             )
                         ),
                     )
