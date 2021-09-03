@@ -71,7 +71,7 @@ async def encod(event):
                 "**Added to Queue ⏰,** \n`Please Wait , Compress will start soon`"
             )
         WORKING.append(1)
-        xxx = await event.reply("`➟ Downloading…`")
+        xxx = await event.reply("`Download Pending…` \n**(Waiting For Connection)**")
         s = dt.now()
         ttt = time.time()
         dir = f"downloads/"
@@ -93,7 +93,7 @@ async def encod(event):
                                 t,
                                 xxx,
                                 ttt,
-                                "`Download Pending…` \n**(Waiting For Connection)**",
+                                "`➟ Downloading…`",
                             )
                         ),
                     )
