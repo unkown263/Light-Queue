@@ -101,7 +101,7 @@ async def progress(current, total, event, start, type_of_ps, file=None):
                 " {} \n\n File Name: {} \n{}".format(type_of_ps, file, tmp)
             )
         else:
-            await event.edit("`✦ {}`\n\n{}".format(type_of_ps, tmp))
+            await event.edit(" {} \n{}".format(type_of_ps, tmp))
 
 
 async def info(file, event):
